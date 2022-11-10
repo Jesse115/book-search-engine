@@ -30,7 +30,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 // Start the Apollo server
-const startApolloServer = async (typeDefs, resolvers) => {
+const startApolloServer = async (_typeDefs, _resolvers) => {
   await server.start();
   // integrate our Apollo server with Express as middleware
   server.applyMiddleware({ app });
